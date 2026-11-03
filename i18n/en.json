@@ -1,0 +1,13 @@
+{
+  "panel.title": "Today",
+  "panel.progress": "%1 / %2",
+  "panel.quickAdd.placeholder": "Add a task…",
+  "panel.backlog.title": "From earlier",
+  "panel.backlog.carry": "Carry to today",
+  "panel.backlog.carryOne": "Carry",
+  "panel.openObsidian": "Open in Obsidian",
+  "panel.emptyToday": "No tasks yet — add one below.",
+  "panel.error.externalChange": "The daily note changed in another app. Reloaded.",
+  "panel.error.io": "Could not read or write the daily note.",
+  "bar.tooltip": "Daily todos · Super+Alt+T · middle-click opens Obsidian"
+}

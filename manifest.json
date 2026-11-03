@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.arynothic.daily-todos",
+  "name": "Daily Todo",
+  "version": "1.0.0",
+  "author": "arynothic",
+  "license": "MIT",
+  "description": "Manage Obsidian daily-note checkboxes from a minimal floating panel and bar progress pill.",
+  "kinds": [
+    "overlay",
+    "bar-widget"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "overlay": "TodoOverlay.qml",
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Daily Todo",
+    "description": "Today’s task progress; click to open the todo panel.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "vaultPath": "",
+      "dailyFolder": "Daily Notes",
+      "backlogDays": 14,
+      "maxBacklogTasks": 20
+    },
+    "schema": [
+      {
+        "key": "vaultPath",
+        "type": "path",
+        "label": "Obsidian vault",
+        "defaultValue": "",
+        "description": "Root folder of the vault Obsidian opens. Set this before use."
+      },
+      {
+        "key": "dailyFolder",
+        "type": "string",
+        "label": "Daily notes folder",
+        "defaultValue": "Daily Notes",
+        "description": "Path inside the vault to dated daily notes (YYYY-MM-DD.md)."
+      },
+      {
+        "key": "backlogDays",
+        "type": "integer",
+        "label": "Backlog scan (days)",
+        "min": 1,
+        "max": 90,
+        "step": 1,
+        "defaultValue": 14,
+        "description": "How many past days to scan for incomplete tasks."
+      },
+      {
+        "key": "maxBacklogTasks",
+        "type": "integer",
+        "label": "Max backlog tasks",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "defaultValue": 20,
+        "description": "Maximum incomplete tasks shown from previous days."
+      }
+    ]
+  }
+}
